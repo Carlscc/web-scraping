@@ -4,7 +4,6 @@ import pprint
 
 #create response variable and get request to grab the Hackernews URL (first checked robots.txt)
 res = requests.get('https://news.ycombinator.com/')
-res2 = requests.get('https://news.ycombinator.com/')
 #parse the data from a string to HTML
 soup = BeautifulSoup(res.text, 'html.parser')
 #create variables to select links and subtext of stories (subtext contains scores and exists even when there are no scores)
